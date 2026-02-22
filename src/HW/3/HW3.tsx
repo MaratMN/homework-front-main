@@ -21,9 +21,8 @@ export const HW3 = () => {
     setCurrentText(event.currentTarget.value); //ЧЕГО-ТО НЕ ХВАТАЕТ
   };
 
-  const handleSave = () => {const n =
-    [...texts, currentText]
-      setTexts(n)
+  const handleSave = () => {
+      setTexts([...texts, currentText])
       setCurrentText('');
 
   };
@@ -41,7 +40,7 @@ export const HW3 = () => {
 
       <input id={'hw03-input'} type="text" value={currentText} onChange={handleChange} />
 
-      <button id={'hw03-button'} onClick={() => {handleSave()}}>
+      <button id={'hw03-button'} onClick={handleSave}>
         Сохранить
       </button>
         {/*//НЕ ХВАТАТЕТ ФУНКЦИИ*/}
